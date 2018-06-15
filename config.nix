@@ -27,6 +27,7 @@
           set expandtab
           set shiftwidth=2
           set softtabstop=2
+          set backspace=indent,eol,start
           set autoindent
           function! SKEL_spec()
                   0r /usr/share/vim/current/skeletons/skeleton.spec
@@ -59,14 +60,17 @@
           set colorcolumn=80 
           '';
         packages.myVimPackage = with super.vimPlugins; {
-          start = [ python-mode ];
+          start = [ 
+                   # python-mode
+                    youcompleteme 
+                    ];
         };        
       };
     };
     myPkgs = with self; buildEnv {
       name = "myPkgs";
       paths = [
-#        myPythonEnv
+        myPythonEnv
 #        nco
 #        atom
 #        bvi
@@ -98,7 +102,7 @@
 #        valgrind
         view_swap
 #        vim
-        ncview
+        ncview #fancy ncddf viewer with gui
         myVim
         vscode
       ];
