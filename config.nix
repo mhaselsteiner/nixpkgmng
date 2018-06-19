@@ -1,6 +1,26 @@
 { allowUnfree = true;
   packageOverrides = super: let self = super.pkgs; in {
-    myPythonEnv = self.python2.buildEnv.override {
+    myPythonEnv27 = self.python2.buildEnv.override {
+      ignoreCollisions = true;
+      extraLibs = with self.pythonPackages; [
+        basemap
+#        epygram
+        netcdf4
+        ipython
+        matplotlib
+        netcdf4
+        numpy
+        pandas
+        seaborn
+#        pint
+        pytest
+        scikitlearn
+        scipy
+
+#        MENT_verif_tool
+      ];
+    };
+     myPythonEnv3 = self.python3.buildEnv.override {
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
         basemap
@@ -19,6 +39,7 @@
 #        MENT_verif_tool
       ];
     };
+
     config.vim.ruby = false; # Because the ruby build fails with our nixpkgs-version
     myVim = super.pkgs.vim_configurable.customize {
       name = "myVim";
@@ -57,12 +78,12 @@
           autocmd BufNewFile      *.spec  call SKEL_spec()
 
           set hidden
-          set colorcolumn=80 
+          set colorcolumn=100 
           '';
         packages.myVimPackage = with super.vimPlugins; {
           start = [ 
                    # python-mode
-                    youcompleteme 
+                    youcompleteme
                     ];
         };        
       };
@@ -70,15 +91,14 @@
     myPkgs = with self; buildEnv {
       name = "myPkgs";
       paths = [
-        myPythonEnv
+#        myPythonEnv27
+        myPythonEnv3
 #        nco
-#        atom
 #        bvi
 #        cgdb
 #        diffoscope
 #        duc
 #        ecflow
-#        emacs
 #        gdal
 #        gdb
         gitAndTools.diff-so-fancy
@@ -89,14 +109,13 @@
         indent
 #        jetbrains.pycharm-community
 #        jq
-#        nano
-#        nedit
         nix-prefetch-scripts
         parallel
         patchelf
         procps-ng # watch command
 #        python36Packages.yapf
         qgis
+        sshfs
         sublime3
 #        tree
 #        valgrind
@@ -104,6 +123,7 @@
 #        vim
         ncview #fancy ncddf viewer with gui
         myVim
+        python36Packages.yapf
         vscode
       ];
     }; 
