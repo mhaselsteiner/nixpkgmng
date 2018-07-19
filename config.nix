@@ -4,7 +4,7 @@
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
         basemap
-#        epygram
+        epygram
         netcdf4
         ipython
         matplotlib
@@ -24,7 +24,7 @@
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
         basemap
-#        epygram
+        epygram
         netcdf4
         ipython
         matplotlib
@@ -113,7 +113,6 @@
         parallel
         patchelf
         procps-ng # watch command
-#        python36Packages.yapf
         qgis
         sshfsFuse2
         sublime3
@@ -125,7 +124,7 @@
         myVim
         python36Packages.yapf
         vscode
-        grib-api
+#        grib-api
         ];
     }; 
   };
