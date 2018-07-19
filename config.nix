@@ -115,7 +115,7 @@
         procps-ng # watch command
 #        python36Packages.yapf
         qgis
-        sshfs
+        sshfsFuse2
         sublime3
 #        tree
 #        valgrind
@@ -125,7 +125,8 @@
         myVim
         python36Packages.yapf
         vscode
-      ];
+        grib-api
+        ];
     }; 
   };
 }
