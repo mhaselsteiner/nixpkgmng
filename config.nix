@@ -16,25 +16,24 @@
         pytest
         scikitlearn
         scipy
-
 #        MENT_verif_tool
       ];
     };
      myPythonEnv3 = self.python3.buildEnv.override {
       ignoreCollisions = true;
-      extraLibs = with self.pythonPackages; [
+      extraLibs = with self.python36Packages; [
         basemap
-        epygram
         netcdf4
         ipython
         matplotlib
         netcdf4
         numpy
         pandas
-        seaborn
+        yapf
+#        seaborn
 #        pint
         pytest
-        scikitlearn
+#        scikitlearn
         scipy
 #        MENT_verif_tool
       ];
@@ -91,8 +90,8 @@
     myPkgs = with self; buildEnv {
       name = "myPkgs";
       paths = [
-#        myPythonEnv27
-        myPythonEnv3
+        myPythonEnv27
+#        myPythonEnv3
 #        nco
 #        bvi
 #        cgdb
@@ -103,7 +102,7 @@
 #        gdb
         gitAndTools.diff-so-fancy
         gitAndTools.gitFull
-#        gqview
+        gqview
 #        gridpp
         htop
         indent
@@ -120,11 +119,11 @@
 #        valgrind
         view_swap
 #        vim
+        python36Packages.yapf
         ncview #fancy ncddf viewer with gui
         myVim
-        python36Packages.yapf
-        vscode
-#        grib-api
+#        vscode
+        grib-api
         ];
     }; 
   };
