@@ -1,16 +1,23 @@
 ## Install via nix
 Nix is used as a package manager.
 To check avaiable software packages on this machine run:
+```
 nix-env -qaP
-
+```
+since nix version 2.0 you can search for packages using
+```
+nix search
+```
 to install software packages globally run:
+```
 nix-env -iA nixpkgs.[package name]
-
+```
 BETTER:
 add all desired packages to myPkgs in config.nix.
 Then run:
+```
 nix-env -iA nixpkgs.myPkgs
-
+```
 This way you always have a good overview of all the installed software.
 
 ## Python
