@@ -22,8 +22,16 @@ This way you always have a good overview of all the installed software.
 
 ## Python
 When using different maybe conflicting python version install one globally,
-set up all others as environments and use them in nix-shells
+set up all others as environments in your config and use them in nix-shells.
+To change the python environment in the nix shell run
+```
+nix-shell -p [ name of customized python package e.g. 'myPythonEnv3]
+```
 
+To install single packages in the shell run
+```
+nix-shell -p [attribute name without nxpkg.]
+```
 ## Configure Software
 If possible configure software in config.nix.
 This ensures, especially for pluggins, all libaries and dependcies are managed properly and avoids conflicts.
