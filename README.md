@@ -25,12 +25,12 @@ When using different maybe conflicting python version install one globally,
 set up all others as environments in your config and use them in nix-shells.
 To change the python environment in the nix shell run
 ```
-nix-shell -p [ name of customized python package e.g. 'myPythonEnv3]
+nix-shell -p [ name of customized python package e.g. 'myPythonEnv3']
 ```
 
 To install single packages in the shell run
 ```
-nix-shell -p [attribute name without nxpkg.]
+nix-shell -p [attribute name without nixpkg.]
 ```
 ## Configure Software
 If possible configure software in config.nix.
