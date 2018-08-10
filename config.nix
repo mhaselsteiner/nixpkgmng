@@ -48,6 +48,8 @@
           set shiftwidth=2
           set softtabstop=2
           set background=dark
+          set number
+          set relativenumber
           set backspace=indent,eol,start
           set autoindent
           function! SKEL_spec()
