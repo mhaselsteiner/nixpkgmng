@@ -3,6 +3,7 @@
     myPythonEnv27 = self.python2.buildEnv.override {
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
+        f90nml #fortran namellist parser for python runs
         basemap
         epygram
         netcdf4
