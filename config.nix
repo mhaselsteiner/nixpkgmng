@@ -13,6 +13,9 @@
         numpy
         pandas
         seaborn
+        unittest2
+        xarray
+        wrf-python
 #        pint
         pytest
         scikitlearn
@@ -25,12 +28,12 @@
       extraLibs = with self.python36Packages; [
         basemap
         netcdf4
+        f90nml
         ipython
         matplotlib
         netcdf4
         numpy
         pandas
-        yapf
 #        seaborn
 #        pint
         pytest
@@ -126,6 +129,7 @@
         python36Packages.yapf
         ncview #fancy ncddf viewer with gui
         myVim
+        mksh
 #        vscode
         grib-api
         ];
