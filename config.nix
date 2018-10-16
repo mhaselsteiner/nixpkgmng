@@ -15,6 +15,7 @@
         seaborn
         unittest2
         xarray
+        cartopy
         wrf-python
 #        pint
         pytest
@@ -97,7 +98,7 @@
     myPkgs = with self; buildEnv {
       name = "myPkgs";
       paths = [
-        myPythonEnv27
+         myPythonEnv27
 #        myPythonEnv3
 #        nco
 #        bvi
@@ -122,6 +123,7 @@
         qgis
         sshfsFuse2
         sublime3
+        subversion
 #        tree
 #        valgrind
         view_swap
