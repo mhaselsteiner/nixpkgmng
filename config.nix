@@ -114,6 +114,7 @@
 #        gridpp
         htop
         indent
+        imagemagick # to produce gifs
 #        jetbrains.pycharm-community
 #        jq
         nix-prefetch-scripts
