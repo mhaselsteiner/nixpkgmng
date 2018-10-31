@@ -4,12 +4,12 @@
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
         f90nml #fortran namellist parser for python runs
-        basemap
+        basemap # to avoid use cartopy
         epygram
-        netcdf4
+        imageio # gifs
         ipython
         matplotlib
-        netcdf4
+        netcdf4 # import as netCDF4
         numpy
         pandas
         seaborn
@@ -19,7 +19,6 @@
         wrf-python
 #        pint
         pytest
-        scikitlearn
         scipy
 #        MENT_verif_tool
       ];
