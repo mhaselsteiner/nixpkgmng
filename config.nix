@@ -113,6 +113,7 @@
 #        diffoscope
 #        duc
 #        ecflow
+        fzf # commandline tool to search bash history
 #        gdal
 #        gdb
         gitAndTools.diff-so-fancy
