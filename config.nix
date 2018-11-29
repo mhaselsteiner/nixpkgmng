@@ -3,23 +3,26 @@
     myPythonEnv27 = self.python2.buildEnv.override {
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
-        f90nml #fortran namellist parser for python runs
         basemap # to avoid use cartopy
+        cartopy
         epygram
+        flake8 # checks your style
+        f90nml #fortran namellist parser for python runs
         imageio # gifs
         ipython
         matplotlib
         netcdf4 # import as netCDF4
         numpy
         pandas
+        pyodbc # to connect to database
+        pylint # checks your style
         seaborn
         unittest2
-        xarray
-        cartopy
-        wrf-python
 #        pint
         pytest
         scipy
+        wrf-python
+        xarray
 #        MENT_verif_tool
       ];
     };
@@ -27,8 +30,10 @@
       ignoreCollisions = true;
       extraLibs = with self.python36Packages; [
         basemap
+        cartopy
         netcdf4
         f90nml
+        imageio # gifs
         ipython
         matplotlib
         netcdf4
@@ -36,9 +41,12 @@
         pandas
 #        seaborn
 #        pint
+        pylint # checks your style
         pytest
 #        scikitlearn
         scipy
+        wrf-python
+        xarray
 #        MENT_verif_tool
       ];
     };
@@ -89,7 +97,7 @@
         packages.myVimPackage = with super.vimPlugins; {
           start = [ 
                    # python-mode
-                    youcompleteme
+                  #youcompleteme
                     ];
         };        
       };
