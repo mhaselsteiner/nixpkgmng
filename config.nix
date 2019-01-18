@@ -20,6 +20,7 @@
         unittest2
 #        pint
         pytest
+        pytestrunner #use it tot include tests with pytest in setup
         scipy
         wrf-python
         xarray
