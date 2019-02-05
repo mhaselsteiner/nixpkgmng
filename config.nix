@@ -4,8 +4,10 @@
       ignoreCollisions = true;
       extraLibs = with self.pythonPackages; [
         basemap # to avoid use cartopy
+        arome_wrf_coupling
         cartopy
         epygram
+        eccodes # ecmwf interface
         flake8 # checks your style
         f90nml #fortran namellist parser for python runs
         imageio # gifs
@@ -19,6 +21,7 @@
         seaborn
         unittest2
 #        pint
+        pbs_header # home brew library to right pbs header to files
         pytest
         pytestrunner #use it tot include tests with pytest in setup
         scipy
@@ -40,6 +43,7 @@
         netcdf4
         numpy
         pandas
+        pbs_header # home brew library to right pbs header to files
 #        seaborn
 #        pint
         pylint # checks your style
